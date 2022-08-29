@@ -1,0 +1,591 @@
+/* SUMMARY
+
+01 - Fonts;
+02 - Config of the screen;
+03 - Home page;
+    03.a - Header;
+    03.b - Main;
+    03.c - Footer;
+
+*/
+
+
+/* 01 - FONTS */
+
+@font-face {
+    font-family: 'Jost';
+    src: url('../fonts/Jost-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+/* 02 - CONFIG */
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    width: 100%;
+    height: 100%; 
+    margin: 0 auto;
+    background-image: url("../img/keyboard03.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+main {
+    min-width: 100%;
+    min-height: 100%;
+    font-family: 'Jost', sans-serif;
+
+}
+
+main::after {
+    content: "";
+    display: block;
+}
+
+/* 03 - HOME PAGE */
+/* 03.a - Header */
+header {
+    padding: 3vh;
+
+}
+
+#welcome-title {
+    text-align: end;
+    margin-right: 8vw;
+    margin-bottom: -12vh;
+    margin-top: 7vh;
+    font-family: 'Jost', sans-serif;
+}
+
+#avatar-main {
+    width: 90%
+}
+
+#avatar-ed {
+    padding-top: 6vh;
+    text-align: center;
+}
+
+
+/* 03.b - Navigation */
+#main-header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.407);
+
+}
+
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-nav #dropdownMenuLink {
+    color: grey;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bolder;
+}
+
+#main-nav .dropdown-menu {
+    background-color: rgba(128, 128, 128, 0.34);
+    color: white;
+}
+
+#main-nav .dropdown-menu a {
+    color: white;
+}
+
+#go-back, #go-to {
+    margin: 0 4vw;
+}
+
+#go-back:hover, #go-to:hover {
+    margin: 0 3vw;
+}
+
+
+#go-to a, #go-back a{
+    color: grey;
+    font-size: 8vw;
+}
+
+#go-back a :hover, #go-to a :hover {
+    font-size: 9vw;
+    color: rgb(99, 96, 96);
+}
+
+
+
+
+/* 03.c - Main */
+
+.main-dialog {
+    border: solid 1px lightgray;
+    padding: 4vh 6vw;
+    border-radius: 16vw 16vw 0 16vw;
+    /* padding-bottom: 18vh; */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.61);
+    margin: 5vh 5vw;
+    margin-top: -3vh;
+}
+
+.admin-dialog {
+    border-radius: 16vw 16vw 16vw 0vw;
+}
+
+#user-answer {
+    display: none;
+}
+
+.dialog-question {
+    color: rgb(221, 146, 158);
+    font-size: 4vw;
+    font-family: 'Jost', sans-serif;
+
+
+}
+
+.dialog-explication {
+    font-style: italic;
+    color: grey;
+    font-size: 3vw;
+}
+
+#form-user-dialog {
+    margin: 6vh 6vw;
+}
+
+#form-message label {
+    font-size: 5vw;
+    color: rgb(221, 146, 158);
+    text-decoration: underline;
+    margin-bottom: 3vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+#message {
+    border: solid 1px lightgrey;
+    padding: 2vw;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.852);
+}
+
+#form-message button {
+    margin: 2vh 40%;
+    border-radius: 5vw;
+    font-size: small;
+}
+
+/* Footer */
+
+footer, #footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: pink;
+    font-weight: 500;
+    padding-bottom: 4vh;
+    margin-top: 20vh;
+}
+
+footer hr, #footer hr {
+    width: 80vw;
+    color: #B49e99;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    margin: 4vh 0;
+}
+
+#footer {
+    display: none;
+}
+/* 04 - PROFIL */
+
+/* 04.a - Header */
+.avatar {
+    width: 90%;
+}
+
+/* 04.b - Main */
+
+#main-display {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 4vw;
+    text-align: justify;
+    padding: 4vw;
+    border: solid 1px lightgrey;
+    background-color: rgba(255, 255, 255, 0.833);
+}
+
+
+.main-title {
+    color: rgb(218, 153, 164);
+    text-decoration: underline;
+    margin: 2vh 0;
+}
+
+.list-item {
+    color: pink;
+    margin: 4vh 0;
+    list-style: none;
+    margin-left: -7vw;
+}
+
+.infos {
+    color: grey;
+}
+
+.infos a {
+    color: rgb(231, 147, 189);
+}
+
+
+
+/* 05 - Education */
+
+.list-ed {
+    color: #B49e99;
+    margin: 3vh 0;
+}
+
+.ed-year {
+    color: #e6ccd8;
+    font-size: small;
+}
+
+.ed-title {
+    color: #b39b96;
+    font-size: small;
+
+}
+
+.splide {
+    margin: 5vh 8vw;
+}
+
+#main-title {
+    text-align: center;
+}
+
+.splide__track {
+    margin: 8vh 0;
+}
+
+.card{
+    padding: 6vw;
+    text-align: center;
+
+}
+
+/* About */
+.hobbie-title {
+    font-size: 7vw;
+}
+
+.hobbie-desc {
+    color: grey;
+    text-decoration: none;
+    margin-bottom: 5vh;
+}
+
+#about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    border: solid 1px lightgrey;
+    margin: 2vh 8vw;
+    padding: 5vh 0;
+    background-color: rgba(255, 255, 255, 0.792);
+    color: grey;
+}
+
+.lang-spe {
+    font-weight: bold;
+}
+
+.links {
+    color: grey;
+    font-size: 10vw;
+    margin: 0 2vw;
+}
+
+.links :hover {
+    color: rgb(99, 98, 98);
+}
+
+@media screen and (min-width: 576px) {
+    /* HOME */
+
+    #avatar-main {
+        width: 50%;
+        margin-top: 10vh;
+    }
+
+    #dialog-space {
+        margin-top: -50vh;
+        margin-left: 29vw;    
+    }
+
+    #welcome-title {
+        color: whitesmoke;
+    }
+
+    #dialog-space p {
+        font-size: 3vw;
+    }
+
+    .dialog-explication {
+        font-size: small;
+    }
+
+    #form-user-dialog {
+        margin-top: 30vh;
+    }
+
+    #form-message label {
+        font-size: 4vw;
+    }
+
+    footer {
+        margin-top: 35vh;
+    }
+
+    /* Profile */
+    .avatar {
+        margin: 10vh 0;
+        width: 50%;
+    }
+
+    /* Education */
+    .splide {
+        margin: 5vh 15vw;
+    }
+
+
+    /*About */
+
+    .hobbie-title, .main-title {
+        font-size: 4.5vw;
+    }
+
+    .links-desc a{
+        font-size: 5vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+    .avatar {
+        width: 40%;
+    }
+
+    #form-message label {
+        font-size: 3vw;
+    }
+
+    #form-message textarea {
+        padding: 1vw;
+    }
+
+    #message {
+        font-size: small;
+
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+    /* Home */
+    body {
+        background-image: url('../img/pad01.jpg');    
+        background-size: 100%; 
+        background-attachment: local; 
+        background-repeat: no-repeat;
+
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #welcome-title {
+        display: none;
+    }
+
+    #advice {
+        margin-left: -1vw;
+        margin-top: 19vh;
+        width: 30vw;
+        height: 68vh;
+        overflow: auto;
+
+    }
+
+    #main-header {
+        width: 29.5vw;
+
+    }
+
+    #avatar-main {
+        width: 90%;
+        margin-top: 0;
+    }    
+
+    #dialog-space {
+        margin: 0;
+    }
+
+    #dialog-space p {
+        font-size: 1.5vw;
+    }
+
+    .dialog-explication {
+        font-size: 1vw;
+    }
+
+    #form-user-dialog {
+        margin-top: 10vh;
+    }
+
+    #form-message label {
+        font-size: 2vw;
+    }
+
+    #form-message button {
+        margin: 2vh 35%;
+    }
+
+    /* Navigation */
+    #main-nav {
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+    }
+
+    #go-back a, #go-to a {
+        font-size: 2vw;
+    }
+
+    #go-back a :hover, #go-to a :hover {
+        font-size: 3vw;
+    }
+
+
+    /* Footer */
+
+    footer { 
+        display: none;
+    }
+
+    #footer {
+        display: flex;
+        width: 100%;
+    }
+
+    #footer hr {
+        width: 80%;
+    }
+
+    /* Avatar */
+    .avatar {
+        width: 65%;
+    }
+
+    /* Profile */
+    #profile {
+        padding-top: 2vh;
+    }
+
+    #body-advice {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5.6vh;
+    }
+
+    /* Education */
+    .splide {
+        width: 25vw;
+        margin: 0;
+    }
+
+    #avatar-ed {
+        margin-bottom: -10vh;
+    }
+
+    .card {
+        padding: 0;
+    }
+
+    /* About */
+    .main-title {
+        font-size: 2vw;
+    }
+
+    .hobbie-desc, .lang-desc, .lang-spe {
+        font-size: small;
+    }
+
+    .links-desc a {
+        font-size: 3vw;
+        margin: 1vw;
+    }
+
+    #about-me {
+        padding: 2vh 1vw;
+    }
+
+    @media screen and (min-width: 1024px) {
+        /* Home */
+        #advice {
+            margin-left: -1px;
+            margin-top: 19.8vh;
+            height: 70.5vh;
+        }
+
+        /* Profile */
+        #profile {
+        padding: 3vh 4vw;
+
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        /* Home */
+        #advice {
+            margin-left: -1vw;
+            margin-top: 25vh;
+            height: 74vh;
+        }
+
+        /* Profile */
+
+        #profile {
+            padding: 3vh 6vw;
+        }
+    }
+}
