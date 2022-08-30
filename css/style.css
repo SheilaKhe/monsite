@@ -34,7 +34,7 @@ body {
     width: 100%;
     height: 100%; 
     margin: 0 auto;
-    background-image: url("../img/keyboard03.jpg");
+    background-image: url("../img/desk03.jpg");
     background-size: cover;
     background-attachment: fixed;
 }
@@ -54,12 +54,12 @@ main::after {
 
 /* 03 - HOME PAGE */
 /* 03.a - Header */
-header {
-    padding: 3vh;
 
+#title {
+    display: none;
 }
 
-#welcome-title {
+.welcome-title {
     text-align: end;
     margin-right: 8vw;
     margin-bottom: -12vh;
@@ -72,7 +72,7 @@ header {
 }
 
 #avatar-ed {
-    padding-top: 6vh;
+    padding-top: 10vh;
     text-align: center;
 }
 
@@ -110,8 +110,8 @@ header {
     margin: 0 4vw;
 }
 
-#go-back:hover, #go-to:hover {
-    margin: 0 3vw;
+#go-back:focus, #go-to:focus {
+    margin: 0 3.8vw;
 }
 
 
@@ -121,9 +121,13 @@ header {
 }
 
 #go-back a :hover, #go-to a :hover {
-    font-size: 9vw;
     color: rgb(99, 96, 96);
 }
+
+#go-back a :focus, #go-to a :focus {
+    font-size: 8.2vw;
+}
+
 
 
 
@@ -167,6 +171,13 @@ header {
     margin: 6vh 6vw;
 }
 
+#form-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #form-message label {
     font-size: 5vw;
     color: rgb(221, 146, 158);
@@ -183,7 +194,7 @@ header {
 }
 
 #form-message button {
-    margin: 2vh 40%;
+    margin: 2vh 0;
     border-radius: 5vw;
     font-size: small;
 }
@@ -214,7 +225,7 @@ footer hr, #footer hr {
 
 /* 04.a - Header */
 .avatar {
-    width: 90%;
+    width: 85%;
 }
 
 /* 04.b - Main */
@@ -224,6 +235,7 @@ footer hr, #footer hr {
     width: 100%;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 #profile {
@@ -280,7 +292,8 @@ footer hr, #footer hr {
 }
 
 .splide {
-    margin: 5vh 8vw;
+    margin: 5vh 0;
+    width: 80%;
 }
 
 #main-title {
@@ -313,8 +326,7 @@ footer hr, #footer hr {
     flex-direction: column;
     align-items: center; 
     border: solid 1px lightgrey;
-    margin: 2vh 8vw;
-    padding: 5vh 0;
+    padding: 5vh 4vw;
     background-color: rgba(255, 255, 255, 0.792);
     color: grey;
 }
@@ -334,6 +346,23 @@ footer hr, #footer hr {
 }
 
 @media screen and (min-width: 576px) {
+
+    /* Nav */
+    #go-to a, #go-back a {
+        font-size: 5vw;
+    }
+
+    #go-to a :focus, #go-back a :focus{
+        font-size: 5.5vw;
+    }
+
+    #go-to a :hover, #go-back a :hover{
+        color: rgb(92, 91, 91);
+    }
+
+
+
+    
     /* HOME */
 
     #avatar-main {
@@ -372,15 +401,9 @@ footer hr, #footer hr {
 
     /* Profile */
     .avatar {
-        margin: 10vh 0;
-        width: 50%;
+        margin: 8vh 0;
+        width: 60%;
     }
-
-    /* Education */
-    .splide {
-        margin: 5vh 15vw;
-    }
-
 
     /*About */
 
@@ -389,14 +412,15 @@ footer hr, #footer hr {
     }
 
     .links-desc a{
-        font-size: 5vw;
+        font-size: 2vw;
     }
 }
 
 @media screen and (min-width: 768px) {
     
     .avatar {
-        width: 40%;
+        width: 65%;
+        margin: 5vh 0;
     }
 
     #form-message label {
@@ -405,6 +429,7 @@ footer hr, #footer hr {
 
     #form-message textarea {
         padding: 1vw;
+        width: 50vw;
     }
 
     #message {
@@ -412,45 +437,54 @@ footer hr, #footer hr {
 
     }
 
+    #profile-list {
+        padding: 3vw;
+    }
+
 }
 
 @media screen and (min-width: 992px) {
 
     /* Home */
-    body {
-        background-image: url('../img/pad01.jpg');    
-        background-size: 100%; 
-        background-attachment: local; 
+    /* body {
+        background-image: url('../img/pad05.jpg');    
+        background-size: cover; 
         background-repeat: no-repeat;
 
-    }
+    } */
 
     main {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
+
     #welcome-title {
         display: none;
     }
 
-    #advice {
-        margin-left: -1vw;
-        margin-top: 19vh;
-        width: 30vw;
-        height: 68vh;
-        overflow: auto;
-
+    #title {
+        display: block;
+        margin-left: 65%;
+        margin-top: 10vh;
+        margin-bottom: -15vh;
     }
 
-    #main-header {
-        width: 29.5vw;
-
+    #advice {
+        width: 57vw;
+        height: 70vh;
+        border: solid 30px whitesmoke;
+        overflow: auto;
+        border-right: solid 40px whitesmoke;
+        border-left: solid 40px whitesmoke;
+        border-radius: 5vw;
+        box-shadow: 2px -2px 10px 1px grey, inset 0px 1px 4px 0px grey;
+        background-color: white;
+        margin: 10vh 20%;
     }
 
     #avatar-main {
-        width: 90%;
+        width: 60%;
         margin-top: 0;
     }    
 
@@ -474,23 +508,37 @@ footer hr, #footer hr {
         font-size: 2vw;
     }
 
+    #form-message textarea {
+        width: unset;
+    }
+
     #form-message button {
         margin: 2vh 35%;
     }
 
     /* Navigation */
+    #main-header {
+        width: 49vw;
+
+    }
+
     #main-nav {
-        justify-content: space-around;
+        justify-content: space-between;
         width: 100%;
         align-items: center;
     }
+
 
     #go-back a, #go-to a {
         font-size: 2vw;
     }
 
     #go-back a :hover, #go-to a :hover {
-        font-size: 3vw;
+        color: rgb(106, 105, 105);
+    }
+
+    #go-back a :focus, #go-to a :focus {
+        font-size: 2.4vw;
     }
 
 
@@ -511,20 +559,13 @@ footer hr, #footer hr {
 
     /* Avatar */
     .avatar {
-        width: 65%;
+        width: 60%;
+        margin: 5vh 0;
     }
 
     /* Profile */
     #profile {
-        padding-top: 2vh;
-    }
-
-    #body-advice {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 5.6vh;
+        padding: 2vh 6vw;
     }
 
     /* Education */
@@ -534,12 +575,14 @@ footer hr, #footer hr {
     }
 
     #avatar-ed {
-        margin-bottom: -10vh;
+        margin-bottom: -5vh;
     }
 
     .card {
         padding: 0;
     }
+
+
 
     /* About */
     .main-title {
@@ -559,33 +602,53 @@ footer hr, #footer hr {
         padding: 2vh 1vw;
     }
 
+
     @media screen and (min-width: 1024px) {
         /* Home */
         #advice {
-            margin-left: -1px;
-            margin-top: 19.8vh;
-            height: 70.5vh;
+            height: 70vh;
         }
 
         /* Profile */
         #profile {
-        padding: 3vh 4vw;
+        padding: 3vh 6vw;
 
         }
+
+        #body-advice {
+            margin-top: 6vh;
+        }
+
+        #avatar-ed {
+            padding-top: 2vh;
+        }
     }
+
 
     @media screen and (min-width: 1200px) {
         /* Home */
         #advice {
-            margin-left: -1vw;
-            margin-top: 25vh;
-            height: 74vh;
+            height: 75vh;
         }
 
         /* Profile */
 
         #profile {
             padding: 3vh 6vw;
+        }
+
+        .avatar {
+            width: 50%;
+        }
+
+        #avatar-ed {
+            padding-top: 3vh;
+        }
+    }
+
+    @media screen and (min-width: 1400px) {
+        #advice {
+            width: 54vw;
         }
     }
 }
