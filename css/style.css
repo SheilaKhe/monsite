@@ -59,7 +59,7 @@ main::after {
     display: none;
 }
 
-.welcome-title {
+.w-title {
     text-align: end;
     margin-right: 8vw;
     margin-bottom: -12vh;
@@ -88,7 +88,10 @@ main::after {
 #main-nav {
     display: flex;
     justify-content: space-between;
+    text-align: center;
+    padding: 2vh 0;
 }
+
 
 #main-nav #dropdownMenuLink {
     color: grey;
@@ -110,21 +113,26 @@ main::after {
     margin: 0 4vw;
 }
 
+#go-back button {
+    border: none;
+    background-color: transparent;
+}
+
 #go-back:focus, #go-to:focus {
     margin: 0 3.8vw;
 }
 
 
-#go-to a, #go-back a{
+#go-to a, #go-back button{
     color: grey;
     font-size: 8vw;
 }
 
-#go-back a :hover, #go-to a :hover {
+#go-back button :hover, #go-to a :hover {
     color: rgb(99, 96, 96);
 }
 
-#go-back a :focus, #go-to a :focus {
+#go-back button :focus, #go-to a :focus {
     font-size: 8.2vw;
 }
 
@@ -312,7 +320,9 @@ footer hr, #footer hr {
 
 /* About */
 .hobbie-title {
-    font-size: 7vw;
+    font-size: 5vw;
+    color: pink;
+    text-decoration: underline;
 }
 
 .hobbie-desc {
@@ -337,7 +347,6 @@ footer hr, #footer hr {
 
 .links {
     color: grey;
-    font-size: 10vw;
     margin: 0 2vw;
 }
 
@@ -348,15 +357,15 @@ footer hr, #footer hr {
 @media screen and (min-width: 576px) {
 
     /* Nav */
-    #go-to a, #go-back a {
+    #go-to a, #go-back button {
         font-size: 5vw;
     }
 
-    #go-to a :focus, #go-back a :focus{
+    #go-to a :focus, #go-back button :focus{
         font-size: 5.5vw;
     }
 
-    #go-to a :hover, #go-back a :hover{
+    #go-to a :hover, #go-back button :hover{
         color: rgb(92, 91, 91);
     }
 
@@ -408,11 +417,11 @@ footer hr, #footer hr {
     /*About */
 
     .hobbie-title, .main-title {
-        font-size: 4.5vw;
+        font-size: 3vw;
     }
 
     .links-desc a{
-        font-size: 2vw;
+        font-size: 3vw;
     }
 }
 
@@ -481,7 +490,22 @@ footer hr, #footer hr {
         box-shadow: 2px -2px 10px 1px grey, inset 0px 1px 4px 0px grey;
         background-color: white;
         margin: 10vh 20%;
+        scroll-behavior: smooth;
     }
+
+    #advice::-webkit-scrollbar {
+        width: 0.4vw;
+    }
+
+    #advice::-webkit-scrollbar-track {
+        background-color: rgba(245, 245, 245, 0.415);
+    }
+
+    #advice::-webkit-scrollbar-thumb {
+        background-color: rgb(131, 212, 190);
+        border-radius: 2vw;
+    }
+
 
     #avatar-main {
         width: 60%;
@@ -529,15 +553,15 @@ footer hr, #footer hr {
     }
 
 
-    #go-back a, #go-to a {
+    #go-back button, #go-to a {
         font-size: 2vw;
     }
 
-    #go-back a :hover, #go-to a :hover {
+    #go-back button :hover, #go-to a :hover {
         color: rgb(106, 105, 105);
     }
 
-    #go-back a :focus, #go-to a :focus {
+    #go-back button :focus, #go-to a :focus {
         font-size: 2.4vw;
     }
 
@@ -585,7 +609,7 @@ footer hr, #footer hr {
 
 
     /* About */
-    .main-title {
+    .hobbie-title {
         font-size: 2vw;
     }
 
@@ -643,6 +667,11 @@ footer hr, #footer hr {
 
         #avatar-ed {
             padding-top: 3vh;
+        }
+
+        /* About */
+        .links-desc a {
+            font-size: 2vw;
         }
     }
 

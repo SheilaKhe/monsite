@@ -6,21 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <title>Welcome to my world!</title>
+    <meta name="description" content="Sheila Khedoo - Web developper">
+    <meta name="keywords" content="Développeur web, développeur, web, cv, web developper, resume"/>
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Sheila Khedoo - Resume">
+    <meta property="og:description" content="Web developper - Sheila Khedoo">
+    <meta property="og:url" content="https://www.sheila-khedoo.com">
+    <meta property="og:image" content="img/Avatar07.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:domain" content="https://www.sheila-khedoo.com">
+    <meta property="twitter:title" content="Sheila Khedoo - Web Developper">
+    <meta property="twitter:image" content="img/Avatar07.png">
+
+    <!-- Général -->
+    <meta property="author" content="Sheila Khedoo">
+    <meta name="copyright" content="Sheila Khedoo" />
+
+    <title>Welcome into my world</title>
 </head>
 <body>
     <header>
         <h1 id="welcome-title" class="w-title">HEY !</h1>
     </header>
     <main>
-        <section id="advice">
-            <h1 id="title" class="w-title">
+        <div id="advice">
+            <h2 id="title" class="w-title">
                 HEY !
-            </h1>
+            </h2>
             <img id="avatar-main" src="img/Avatar02.png" alt="Avatar de Sheila">
-            <section id="dialog-space">
+            <div id="dialog-space">
                 <div class="main-dialog admin-dialog">
                     <p class="dialog-question"></p>
                 </div>
@@ -29,21 +45,23 @@
                     <p class="dialog-answer"></p>
                 </div>
                 
-            </section>
-            <section id="form-user-dialog">
+            </div>
+            <div id="form-user-dialog">
                 
                 <form id="form-message">
                     <label for="message">Message : </label>
-                    <textarea name="message" id="message" cols="43" rows="5">
+                    <textarea name="message" id="message" cols="43" rows="5" onKeyPress="if(event.keyCode == 13) sendMsg();">
                     </textarea>
                     <button type="button" id="btn-form" class="btn btn-outline-secondary">Send</button>
                 </form>
-            </section>
+            </div>
             <div id="footer">
                 <hr>
                 <p>&copy; 2022 - Sheila Khedoo</p>         
             </div>
-        </section>
+        </div>
+
+    </main>
     <footer>
         <hr>
         <p>&copy; 2022 - Sheila Khedoo</p> 

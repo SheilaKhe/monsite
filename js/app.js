@@ -25,6 +25,40 @@ let btnSend = document.getElementById('btn-form');
 let answer = document.querySelector('.dialog-answer');
 let userAnswer = document.getElementById('user-answer');
 
+function sendMsg(params) {
+    let msg = document.getElementById('message').value;
+
+    if (msg == 1) {
+        window.location.href='profile.html';
+    }
+    else if (msg == 2) {
+        window.location.href='education.html';
+    }
+    else if (msg == 3) {
+        window.location.href='work.html';
+    }
+    else if (msg == 4) {
+        window.location.href='about.html';
+    }
+    else {
+
+        if(getComputedStyle(userAnswer).display != "none") {
+            userAnswer.style.display = "none";
+        } else {
+            userAnswer.style.display = "block";
+        let typewriter = new Typewriter(answer, {
+
+        })
+        .start()
+        .typeString(msg)
+        .pauseFor(200)
+        .changeDelay(8)
+        .typeString('<br><p style="color:red;font-style:italic;font-size:small;">' + msg + ' is not in the list, please tap another number :) </p>')
+        }
+    }
+
+}
+
 btnSend.addEventListener('click', function() {
     let msg = document.getElementById('message').value;
 

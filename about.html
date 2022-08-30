@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <title>Welcome to my world!</title>
+    <title>More and more about me</title>
 </head>
 <body id="body-advice">
-    <section id="advice">
+    <div id="advice">
         <header id="main-header">
             <nav id="main-nav">
                 <div id="go-back">
-                    <a type="button" onclick="history.back()" title="Go back">
+                    <button type="button" onclick="history.back()" title="Go back" alt="Go back">
                         <i class="fa-solid fa-angle-left"></i>
-                    </a>
+                    </button>
                 </div>
                 <div class="dropdown">
                     <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -23,14 +23,14 @@
                     </a>
                 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="index.html">Home</a></li>
-                    <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                    <li><a class="dropdown-item" href="education.html">Education</a></li>
-                    <li><a class="dropdown-item" href="work.html">Work experience</a></li>
+                    <li><a class="dropdown-item" href="index.html" alt="Back home">Home</a></li>
+                    <li><a class="dropdown-item" href="profile.html" alt="My profile">Profile</a></li>
+                    <li><a class="dropdown-item" href="education.html" alt="Education">Education</a></li>
+                    <li><a class="dropdown-item" href="work.html" alt="Work">Work experience</a></li>
                     </ul>
                 </div>  
                 <div id="go-to">
-                    <a type="button" href="index.html" title="Back home">
+                    <a href="index.html" title="Back home" alt="Home">
                         <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </div>
@@ -42,11 +42,11 @@
                 <img class="avatar" src="img/Avatar06.png" alt="Avatar de Sheila" >
             </div>
             <div id="about-me">
-                <h2 class="hobbie-title main-title">MY HOBBIES</h2>
+                <h2 class="hobbie-title">MY HOBBIES</h2>
                 <p class="hobbie-desc"></p>
-                <h2 class="main-title">LANGUAGE</h2>
+                <h2 class="hobbie-title">LANGUAGE</h2>
                 <p class="lang-desc"></p>
-                <h2 class="main-title">LINKS</h2>
+                <h2 class="hobbie-title">LINKS</h2>
                 <div class="links-desc"></div>
             </div>
         </main>
@@ -57,7 +57,7 @@
 
 
 
-    </section>
+    </div>
     <footer>
         <hr>
         <p>&copy; 2022 - Sheila Khedoo</p> 
@@ -93,7 +93,7 @@
         })
         .pauseFor(12000)
         .start()
-        .typeString('<a href="" target="__blank" class="links"><i class="fa-brands fa-github"></i></a> <a href="" target="__blank" class="links"><i class="fa-brands fa-linkedin"></i></a>')
+        .typeString('<a href="https://github.com/SheilaKhe" target="__blank" class="links" alt="My github"><i class="fa-brands fa-github"></i></a> <a href="https://www.linkedin.com/in/sheila-khedoo/" target="__blank" class="links" alt="My LinkedIn"><i class="fa-brands fa-linkedin"></i></a>')
     </script>
 </body>
 </html>

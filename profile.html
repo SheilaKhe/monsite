@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <title>Welcome to my world!</title>
+    <title>Me, myself and I </title>
 </head>
 <body id="body-advice">
-    <section id="advice">
+    <div id="advice">
     <header id="main-header">
         <nav id="main-nav">
             <div id="go-back">
-                <a type="button" onclick="history.back()" title="Go back">
+                <button type="button" onclick="history.back()" title="Go back" alt="Go back">
                     <i class="fa-solid fa-angle-left"></i>
-                </a>
+                </button>
             </div>
             <div class="dropdown">
                 <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -23,14 +23,14 @@
                 </a>
               
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="index.html">Home</a></li>
-                  <li><a class="dropdown-item" href="education.html">Education</a></li>
-                  <li><a class="dropdown-item" href="work.html">Work experience</a></li>
-                  <li><a class="dropdown-item" href="about.html">About me</a></li>
+                  <li><a class="dropdown-item" href="index.html" alt="Back home">Home</a></li>
+                  <li><a class="dropdown-item" href="education.html" alt="Education">Education</a></li>
+                  <li><a class="dropdown-item" href="work.html" alt="Work experience">Work experience</a></li>
+                  <li><a class="dropdown-item" href="about.html" alt="About me">About me</a></li>
                 </ul>
               </div>  
             <div id="go-to">
-                <a type="button" href="education.html" title="Education">
+                <a href="education.html" title="Education" alt="Education">
                     <i class="fa-solid fa-angle-right"></i>
                 </a>
             </div>
@@ -42,7 +42,7 @@
         </div>
 
     <main id="main-display">
-        <section id="profile">
+        <div id="profile">
             <div id="profile-list">
                 <ul>
                     <li class="list-item">NAME : <span class="infos">Sheila Khedoo</span></li>
@@ -65,10 +65,10 @@
                             <li class="infos">Git</li>
                         </ul>
                     </li>
-                    <li class="list-item">LINKS : <span class="infos">Go to <a href="">this</a> page</span></li>
+                    <li class="list-item">LINKS : <span class="infos">Go to <a href="about.html" alt="Links">this</a> page</span></li>
                 </ul>
             </div>
-        </section>
+        </div>
         <div id="footer">
             <hr>
             <p>&copy; 2022 - Sheila Khedoo</p>         
@@ -76,7 +76,7 @@
 
     </main>
 
-    </section>
+    </div>
     <footer>
         <hr>
         <p>&copy; 2022 - Sheila Khedoo</p> 
