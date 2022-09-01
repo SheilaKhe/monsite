@@ -4,9 +4,45 @@
 02 - Config of the screen;
 03 - Home page;
     03.a - Header;
-    03.b - Main;
-    03.c - Footer;
+    03.b - Navigation;
+    03.c - Main;
+    03.d - Footer;
+04 - Profile;
+    04.a - Header;
+    04.b - Main;
+05 - Education;
+    05.a - Main;
+    05.b - Slide;
+06 - About me;
+    06.a - Main;
+*/
 
+/* MEDIA QUERIES 
+
+A - min-width: 576px;
+    A.1 - Navigation;
+    A.2 - Home; 
+    A.3 - Profile;
+    A.4 - About me;
+B - min-width: 768px;
+    B.1 - Home;
+    B.2 - Profile;
+C - min-width: 992px;
+    C.1 - Main;
+    C.2 - Home;
+    C.3 - Navigation;
+    C.4 - Footer;
+    C.5 - Profile;
+    C.6 - Education;
+    C.7 - About me;
+D - min-width: 1024px;
+    D.1 - Home; 
+    D.2 - Profile;
+E - min-width: 1200px;
+    E.1 - Home;
+    E.2 - Profile;
+    E.3 - About me;
+F - min-width: 1400px;
 */
 
 
@@ -52,7 +88,7 @@ main::after {
     display: block;
 }
 
-/* 03 - HOME PAGE */
+/* 03 - HOME */
 /* 03.a - Header */
 
 #title {
@@ -137,11 +173,7 @@ main::after {
 }
 
 
-
-
-
 /* 03.c - Main */
-
 .main-dialog {
     border: solid 1px lightgray;
     padding: 4vh 6vw;
@@ -165,8 +197,6 @@ main::after {
     color: rgb(221, 146, 158);
     font-size: 4vw;
     font-family: 'Jost', sans-serif;
-
-
 }
 
 .dialog-explication {
@@ -207,7 +237,7 @@ main::after {
     font-size: small;
 }
 
-/* Footer */
+/* 03.d - Footer */
 
 footer, #footer {
     display: flex;
@@ -229,7 +259,9 @@ footer hr, #footer hr {
 #footer {
     display: none;
 }
-/* 04 - PROFIL */
+
+
+/* 04 - PROFILe */
 
 /* 04.a - Header */
 .avatar {
@@ -237,7 +269,6 @@ footer hr, #footer hr {
 }
 
 /* 04.b - Main */
-
 #main-display {
     display: flex;
     width: 100%;
@@ -256,7 +287,6 @@ footer hr, #footer hr {
     border: solid 1px lightgrey;
     background-color: rgba(255, 255, 255, 0.833);
 }
-
 
 .main-title {
     color: rgb(218, 153, 164);
@@ -280,9 +310,9 @@ footer hr, #footer hr {
 }
 
 
+/* 05 - EDUCATION */
 
-/* 05 - Education */
-
+/* 05.a - Main */
 .list-ed {
     color: #B49e99;
     margin: 3vh 0;
@@ -299,6 +329,7 @@ footer hr, #footer hr {
 
 }
 
+/* 05.b - Slide */
 .splide {
     margin: 5vh 0;
     width: 80%;
@@ -318,7 +349,8 @@ footer hr, #footer hr {
 
 }
 
-/* About */
+/* 06 - ABOUT ME */
+/* 06.a - Main */
 .hobbie-title {
     font-size: 5vw;
     color: pink;
@@ -354,9 +386,13 @@ footer hr, #footer hr {
     color: rgb(99, 98, 98);
 }
 
+/* MEDIA QUERIES */
+
+/* A - min-width: 576px */
+
 @media screen and (min-width: 576px) {
 
-    /* Nav */
+    /* A.1 Navigation */
     #go-to a, #go-back button {
         font-size: 5vw;
     }
@@ -369,11 +405,8 @@ footer hr, #footer hr {
         color: rgb(92, 91, 91);
     }
 
-
-
-    
-    /* HOME */
-
+   
+    /* A.2 - Home */
     #avatar-main {
         width: 50%;
         margin-top: 10vh;
@@ -408,13 +441,13 @@ footer hr, #footer hr {
         margin-top: 35vh;
     }
 
-    /* Profile */
+    /* A.3 - Profile */
     .avatar {
         margin: 8vh 0;
         width: 60%;
     }
 
-    /*About */
+    /* A.4 - About me */
 
     .hobbie-title, .main-title {
         font-size: 3vw;
@@ -425,13 +458,10 @@ footer hr, #footer hr {
     }
 }
 
+/* B - min-width: 768px */
 @media screen and (min-width: 768px) {
     
-    .avatar {
-        width: 65%;
-        margin: 5vh 0;
-    }
-
+    /* B.1 - Home */
     #form-message label {
         font-size: 3vw;
     }
@@ -446,37 +476,26 @@ footer hr, #footer hr {
 
     }
 
+    /* B.2 - Profile */
+    .avatar {
+        width: 65%;
+        margin: 5vh 0;
+    }
+
     #profile-list {
         padding: 3vw;
     }
 
 }
 
+/* C - min-width: 992px */
 @media screen and (min-width: 992px) {
 
-    /* Home */
-    /* body {
-        background-image: url('../img/pad05.jpg');    
-        background-size: cover; 
-        background-repeat: no-repeat;
-
-    } */
-
+    /* C.1 - Main */
     main {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    #welcome-title {
-        display: none;
-    }
-
-    #title {
-        display: block;
-        margin-left: 65%;
-        margin-top: 10vh;
-        margin-bottom: -15vh;
     }
 
     #advice {
@@ -506,6 +525,17 @@ footer hr, #footer hr {
         border-radius: 2vw;
     }
 
+    /* C.2 -Home */
+    #welcome-title {
+        display: none;
+    }
+
+    #title {
+        display: block;
+        margin-left: 65%;
+        margin-top: 10vh;
+        margin-bottom: -15vh;
+    }
 
     #avatar-main {
         width: 60%;
@@ -540,10 +570,9 @@ footer hr, #footer hr {
         margin: 2vh 35%;
     }
 
-    /* Navigation */
+    /* C.3 - Navigation */
     #main-header {
         width: 49vw;
-
     }
 
     #main-nav {
@@ -551,7 +580,6 @@ footer hr, #footer hr {
         width: 100%;
         align-items: center;
     }
-
 
     #go-back button, #go-to a {
         font-size: 2vw;
@@ -565,9 +593,7 @@ footer hr, #footer hr {
         font-size: 2.4vw;
     }
 
-
-    /* Footer */
-
+    /* C.4 - Footer */
     footer { 
         display: none;
     }
@@ -581,18 +607,17 @@ footer hr, #footer hr {
         width: 80%;
     }
 
-    /* Avatar */
+    /* C.5 - Profile */
     .avatar {
         width: 60%;
         margin: 5vh 0;
     }
 
-    /* Profile */
     #profile {
         padding: 2vh 6vw;
     }
 
-    /* Education */
+    /* C.6 - Education */
     .splide {
         width: 25vw;
         margin: 0;
@@ -606,9 +631,7 @@ footer hr, #footer hr {
         padding: 0;
     }
 
-
-
-    /* About */
+    /* C.7 - About me */
     .hobbie-title {
         font-size: 2vw;
     }
@@ -626,17 +649,16 @@ footer hr, #footer hr {
         padding: 2vh 1vw;
     }
 
-
+    /* D - min-width: 1024px */
     @media screen and (min-width: 1024px) {
-        /* Home */
+        /* D.1 - Home */
         #advice {
             height: 70vh;
         }
 
-        /* Profile */
+        /* D.2 - Profile */
         #profile {
-        padding: 3vh 6vw;
-
+            padding: 3vh 6vw;
         }
 
         #body-advice {
@@ -648,15 +670,14 @@ footer hr, #footer hr {
         }
     }
 
-
+    /* E - min-width: 1200px */
     @media screen and (min-width: 1200px) {
-        /* Home */
+        /* E.1 - Home */
         #advice {
             height: 75vh;
         }
 
-        /* Profile */
-
+        /* E.2 - Profile */
         #profile {
             padding: 3vh 6vw;
         }
@@ -669,12 +690,13 @@ footer hr, #footer hr {
             padding-top: 3vh;
         }
 
-        /* About */
+        /* E.3 - About me*/
         .links-desc a {
             font-size: 2vw;
         }
     }
 
+    /* F - min-width: 1400px */
     @media screen and (min-width: 1400px) {
         #advice {
             width: 54vw;
