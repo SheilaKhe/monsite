@@ -24,35 +24,29 @@
     <meta property="author" content="Sheila Khedoo">
     <meta name="copyright" content="Sheila Khedoo" />
 
-    <title>Welcome into my world</title>
+    <title>Hey !</title>
 </head>
 <body>
     <header>
-        <h1 id="welcome-title" class="w-title">HEY !</h1>
     </header>
     <main>
         <div id="advice">
-            <h2 id="title" class="w-title">
+            <!-- <h2 id="title" class="w-title">
                 HEY !
-            </h2>
-            <img id="avatar-main" src="img/Avatar02.png" alt="Avatar de Sheila">
+            </h2> -->
             <div id="dialog-space">
                 <div class="main-dialog admin-dialog">
                     <p class="dialog-question"></p>
                 </div>
-
-                <div id="user-answer" class="main-dialog">
-                    <p class="dialog-answer"></p>
-                </div>
-                
             </div>
+            <img id="avatar-main" src="img/Avatar02.png" alt="Avatar de Sheila">
             <div id="form-user-dialog">
                 
                 <form id="form-message">
-                    <label for="message">Message : </label>
-                    <textarea name="message" id="message" cols="43" rows="5" onKeyPress="if(event.keyCode == 13) sendMsg();">
+                    <label for="message">Answer me : </label>
+                    <textarea name="message" id="message" cols="43" rows="2" onKeyPress="if(event.keyCode == 13) sendMsg();" placeholder="Tap your answer here...">
                     </textarea>
-                    <button type="button" id="btn-form" class="btn btn-outline-secondary">Send</button>
+                    <button type="button" id="btn-form" class="btn">Send</button>
                 </form>
             </div>
             <div id="footer">

@@ -104,11 +104,12 @@ main::after {
 }
 
 #avatar-main {
-    width: 90%
+    width: 68%;
+    position: absolute;
+    top: 25vh;
 }
 
-#avatar-ed {
-    padding-top: 10vh;
+.av {
     text-align: center;
 }
 
@@ -174,6 +175,11 @@ main::after {
 
 
 /* 03.c - Main */
+#dialog-space {
+    margin-left: 28vw;
+    margin-top: 10vh;
+}
+
 .main-dialog {
     border: solid 1px lightgray;
     padding: 4vh 6vw;
@@ -207,6 +213,9 @@ main::after {
 
 #form-user-dialog {
     margin: 6vh 6vw;
+    position: absolute;
+    bottom: 13vh;
+
 }
 
 #form-message {
@@ -235,18 +244,27 @@ main::after {
     margin: 2vh 0;
     border-radius: 5vw;
     font-size: small;
+    background-color: pink;
+    color: rgb(255, 255, 255);
+}
+
+#form-message button :hover {
+    background-color: rgb(253, 171, 185);
 }
 
 /* 03.d - Footer */
-
+footer {
+    position: absolute;
+    margin: 5vh 10vw;
+    bottom: 0;
+}
 footer, #footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: pink;
     font-weight: 500;
-    padding-bottom: 4vh;
-    margin-top: 20vh;
+    /* padding-bottom: 4vh; */
 }
 
 footer hr, #footer hr {
@@ -409,11 +427,10 @@ footer hr, #footer hr {
     /* A.2 - Home */
     #avatar-main {
         width: 50%;
-        margin-top: 10vh;
+        top: 20vh;
     }
 
     #dialog-space {
-        margin-top: -50vh;
         margin-left: 29vw;    
     }
 
@@ -430,15 +447,12 @@ footer hr, #footer hr {
     }
 
     #form-user-dialog {
-        margin-top: 30vh;
+        margin: 6vh 25vw;
     }
 
     #form-message label {
-        font-size: 4vw;
-    }
-
-    footer {
-        margin-top: 35vh;
+        font-size: 3vw;
+        margin-bottom: 1vh;
     }
 
     /* A.3 - Profile */
@@ -462,13 +476,17 @@ footer hr, #footer hr {
 @media screen and (min-width: 768px) {
     
     /* B.1 - Home */
+    #form-user-dialog {
+        margin: 6vh 18vw;
+        left: 30vw;
+    }
+    
     #form-message label {
-        font-size: 3vw;
+        font-size: 2vw;
     }
 
     #form-message textarea {
         padding: 1vw;
-        width: 50vw;
     }
 
     #message {
@@ -499,8 +517,8 @@ footer hr, #footer hr {
     }
 
     #advice {
-        width: 57vw;
-        height: 70vh;
+        width: 60vw;
+        height: 75vh;
         border: solid 30px whitesmoke;
         overflow: auto;
         border-right: solid 40px whitesmoke;
@@ -538,12 +556,17 @@ footer hr, #footer hr {
     }
 
     #avatar-main {
-        width: 60%;
-        margin-top: 0;
+        width: 32%;
     }    
 
+    .main-dialog{
+        margin: 5vh 1vw;
+        padding: 2vh 2vw;
+    }
+
     #dialog-space {
-        margin: 0;
+        margin-top: 6vh;
+        margin-left: 15vw;
     }
 
     #dialog-space p {
@@ -555,11 +578,14 @@ footer hr, #footer hr {
     }
 
     #form-user-dialog {
-        margin-top: 10vh;
+        margin: 6vh 18vw;
+        left: 25vw;
+        bottom: 26vh;
     }
 
     #form-message label {
-        font-size: 2vw;
+        font-size: 1.5vw;
+        margin-bottom: 1vh;
     }
 
     #form-message textarea {
@@ -572,7 +598,7 @@ footer hr, #footer hr {
 
     /* C.3 - Navigation */
     #main-header {
-        width: 49vw;
+        width: 52vw;
     }
 
     #main-nav {
@@ -595,43 +621,66 @@ footer hr, #footer hr {
 
     /* C.4 - Footer */
     footer { 
-        display: none;
+        width: 40vw;
+        left: 20vw;
+        bottom: 15vh;
+        background-color: white;
     }
 
-    #footer {
+    /* #footer {
         display: flex;
-        width: 100%;
-    }
+        width: 52%;
+        margin-top: -8vh;
+        position: fixed;
+    } */
 
-    #footer hr {
-        width: 80%;
+    footer hr {
+        width: 45vw;
+        margin-top: 0;
     }
 
     /* C.5 - Profile */
     .avatar {
-        width: 60%;
-        margin: 5vh 0;
+        width: 50%;
+        margin: 0;
     }
 
     #profile {
-        padding: 2vh 6vw;
+        padding: 2vh 7vw;
+        margin-bottom: 25vh;
+    }
+
+    #profile-list {
+        padding: unset;
+    }
+
+    #avatar-profile {
+        padding: 2vh 0;
     }
 
     /* C.6 - Education */
     .splide {
         width: 25vw;
-        margin: 0;
+        margin: unset;
+        margin-bottom: 18vh;
     }
-
+    
     #avatar-ed {
-        margin-bottom: -5vh;
+        margin-top: 8vh;
     }
 
     .card {
         padding: 0;
     }
+    /* C.7 - Work */
+    #avatar-work {
+        margin-top: 7vh;;
+    }
 
-    /* C.7 - About me */
+    /* C.8 - About me */
+    #avatar-about {
+        margin-top: 5vh;
+    }
     .hobbie-title {
         font-size: 2vw;
     }
@@ -647,6 +696,7 @@ footer hr, #footer hr {
 
     #about-me {
         padding: 2vh 1vw;
+        margin-bottom: 20vh;
     }
 
     /* D - min-width: 1024px */
@@ -656,17 +706,34 @@ footer hr, #footer hr {
             height: 70vh;
         }
 
+        #avatar-main {
+            width: 28%;
+        }
+
+        #form-user-dialog {
+            bottom: 29vh;
+        }
+
+        footer {
+            bottom: 20vh;
+        }
+
         /* D.2 - Profile */
         #profile {
             padding: 3vh 6vw;
         }
 
-        #body-advice {
-            margin-top: 6vh;
-        }
-
         #avatar-ed {
             padding-top: 2vh;
+        }
+
+        .avatar {
+            width: 42%;
+        }
+
+        /* D.3 - About me */
+        #avatar-abt {
+            margin-top: 8vh;
         }
     }
 
@@ -677,20 +744,40 @@ footer hr, #footer hr {
             height: 75vh;
         }
 
+        #main-header {
+            width: 53vw;
+        }
+
+        #avatar-main {
+            width: 25%;
+        }
+
+        footer {
+            bottom: 15vh;
+        }
+
+        #form-user-dialog {
+            bottom: 25vh;
+        }
+
         /* E.2 - Profile */
+        .avatar {
+            width: 35%;
+        }
         #profile {
             padding: 3vh 6vw;
         }
 
-        .avatar {
-            width: 50%;
-        }
-
+        /* E.3 - Education */
         #avatar-ed {
             padding-top: 3vh;
         }
 
-        /* E.3 - About me*/
+        #avatar-ed .avatar, #avatar-work .avatar, #avatar-abt .avatar {
+            width: 46%;
+
+        }
+        /* E.4 - About me*/
         .links-desc a {
             font-size: 2vw;
         }
@@ -698,8 +785,31 @@ footer hr, #footer hr {
 
     /* F - min-width: 1400px */
     @media screen and (min-width: 1400px) {
+        /* F.1 - Home */
         #advice {
             width: 54vw;
+        }
+
+        #main-header {
+            width: 48vw;
+        }
+
+        #avatar-main {
+            width: 23%;
+        }
+
+        #dialog-space {
+            margin-top: 8vh;
+        }
+
+        #form-user-dialog {
+            bottom: 23vh;
+        }
+
+
+        #body-advice {
+            margin-left: 3vw;
+
         }
     }
 }

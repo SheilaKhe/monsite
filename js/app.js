@@ -22,8 +22,6 @@ let typewriter = new Typewriter(app, {
 
 // Récupérer information dialogue
 let btnSend = document.getElementById('btn-form');
-let answer = document.querySelector('.dialog-answer');
-let userAnswer = document.getElementById('user-answer');
 
 function sendMsg(params) {
     let msg = document.getElementById('message').value;
@@ -42,19 +40,9 @@ function sendMsg(params) {
     }
     else {
 
-        if(getComputedStyle(userAnswer).display != "none") {
-            userAnswer.style.display = "none";
-        } else {
-            userAnswer.style.display = "block";
-        let typewriter = new Typewriter(answer, {
+        alert(msg + ' is not in the list, please tap another number');
+        location.reload();
 
-        })
-        .start()
-        .typeString(msg)
-        .pauseFor(200)
-        .changeDelay(8)
-        .typeString('<br><p style="color:red;font-style:italic;font-size:small;">' + msg + ' is not in the list, please tap another number :) </p>')
-        }
     }
 
 }
