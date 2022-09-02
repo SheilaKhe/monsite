@@ -106,11 +106,12 @@ main::after {
 #avatar-main {
     width: 68%;
     position: absolute;
-    top: 25vh;
+    top: 18vh;
 }
 
 .av {
     text-align: center;
+    margin-top: 2vh;
 }
 
 
@@ -119,7 +120,6 @@ main::after {
     position: fixed;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.407);
-
 }
 
 #main-nav {
@@ -177,7 +177,7 @@ main::after {
 /* 03.c - Main */
 #dialog-space {
     margin-left: 28vw;
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 
 .main-dialog {
@@ -187,8 +187,7 @@ main::after {
     /* padding-bottom: 18vh; */
     text-align: center;
     background-color: rgba(255, 255, 255, 0.61);
-    margin: 5vh 5vw;
-    margin-top: -3vh;
+    margin: 2vh 5vw;
 }
 
 .admin-dialog {
@@ -212,9 +211,9 @@ main::after {
 }
 
 #form-user-dialog {
-    margin: 6vh 6vw;
+    margin: 6vh 12vw;
     position: absolute;
-    bottom: 13vh;
+    bottom: 14vh;
 
 }
 
@@ -254,28 +253,21 @@ main::after {
 
 /* 03.d - Footer */
 footer {
-    position: absolute;
-    margin: 5vh 10vw;
+    position: fixed;
+    text-align: center;
+    margin: 0 10vw;
     bottom: 0;
-}
-footer, #footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     color: pink;
     font-weight: 500;
     /* padding-bottom: 4vh; */
+    margin-top: 10vh;
 }
 
-footer hr, #footer hr {
+footer hr {
     width: 80vw;
     color: #B49e99;
     box-shadow: 1px 1px 1px 1px lightgray;
     margin: 4vh 0;
-}
-
-#footer {
-    display: none;
 }
 
 
@@ -283,7 +275,8 @@ footer hr, #footer hr {
 
 /* 04.a - Header */
 .avatar {
-    width: 85%;
+    width: 65%;
+    margin-top: 6vh;
 }
 
 /* 04.b - Main */
@@ -304,6 +297,7 @@ footer hr, #footer hr {
     padding: 4vw;
     border: solid 1px lightgrey;
     background-color: rgba(255, 255, 255, 0.833);
+    margin-bottom: 15vh;
 }
 
 .main-title {
@@ -351,6 +345,7 @@ footer hr, #footer hr {
 .splide {
     margin: 5vh 0;
     width: 80%;
+    margin-bottom: 15vh;
 }
 
 #main-title {
@@ -389,6 +384,8 @@ footer hr, #footer hr {
     padding: 5vh 4vw;
     background-color: rgba(255, 255, 255, 0.792);
     color: grey;
+    margin-bottom: 15vh;
+
 }
 
 .lang-spe {
@@ -621,18 +618,15 @@ footer hr, #footer hr {
 
     /* C.4 - Footer */
     footer { 
+        position: absolute;
         width: 40vw;
         left: 20vw;
-        bottom: 15vh;
+        bottom: 20.3vh;
         background-color: white;
-    }
-
-    /* #footer {
         display: flex;
-        width: 52%;
-        margin-top: -8vh;
-        position: fixed;
-    } */
+        flex-direction: column;
+        align-items: center;
+    }
 
     footer hr {
         width: 45vw;
@@ -715,7 +709,7 @@ footer hr, #footer hr {
         }
 
         footer {
-            bottom: 20vh;
+            bottom: 25.3vh;
         }
 
         /* D.2 - Profile */
@@ -753,7 +747,7 @@ footer hr, #footer hr {
         }
 
         footer {
-            bottom: 15vh;
+            bottom: 20.3vh;
         }
 
         #form-user-dialog {
@@ -806,10 +800,19 @@ footer hr, #footer hr {
             bottom: 23vh;
         }
 
-
         #body-advice {
             margin-left: 3vw;
 
+        }
+
+        footer {
+            bottom: 20.3vh;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        footer {
+            bottom: 20vh;
         }
     }
 }
